@@ -2,85 +2,58 @@
 \chapter{Einf\"{u}hrung}
 %*****************************************
 \input{introduction/motivation.tex}
-\section{Voraussetzungen}
-
+\input{introduction/tasks_concrete.tex}
+\input{introduction/methods}
 
 %*****************************************
 \chapter{Projektdefinition und Zeitmanagement}\label{ch:project}
 %*****************************************
-\input{project_time/projektziele.tex}
-\input{project_time/aufgaben.tex}
-\section{Anforderungen}
-\subsection{Aerosole}
-\subsection{Versuchsaufbau}
+\input{project/projektziele.tex}
+\input{project/aufgaben.tex}
+\input{project/requirements.tex}
 
 %*****************************************
 \chapter{Technische Grundlagen}\label{ch:foundations}
 %*****************************************
-\section{Str\"{o}mungsmechanik}
-\subsection{Str\"{o}mungseigenschaften}
-\subsubsection{Reynolds- und Prandtlzahl}
-
-\section{Reinraumtechnik}
-\subsection{Eigenschaften von Partikeln}
-\subsubsection{Bremsemissionspartikel}
-\subsection{Partikelmessverfahren}
-\subsection{Aerosole}
-
-\section{Mechanische Grundlagen}
-\subsection{Ventile (Noch nicht fest)}
-\subsection{Luftfiltersysteme (Noch nicht fest)}
-
+\input{fundamentals/streams.tex}
+\input{fundamentals/particles.tex}
+\input{fundamentals/mechanics.tex}
+\input{fundamentals/related.tex}
 
 %************************************************
-\chapter{Versuchsplattform}\label{ch:platform}
+\chapter{Vergleich von Pr\"{u}f-Aerosole}\label{ch:aerosol}
 %************************************************
-\section{Partikelmessger\"{a}te}
-\subsection{OPS-3330}
-\subsection{FMPS-3091}
-
-\section{Simulation (Unsicher)}
-\subsection{SpaceClaim (Unsicher)}
-\subsection{Fluent (Unsicher)}
-
-\section{Partikelgeneratoren}
-\subsection{Topas ATM 220}
-\subsection{Palas 2000H}
-
-
-%************************************************
-\chapter{Analyse von Pr\"{u}f-Aerosole}\label{ch:aerosol}
-%************************************************
-\section{Di-Ethyl-Hexyl-Sebacat (DEHS)}
-\section{Di-N-Octylphtalat (DOP)}
-\section{Emery 3004 (PAO-4)}
-\section{Poly Styrene Latex Spheres (PSL)}
-\section{Auswertung der Analyse}
-\subsection{Anforderungsvergleich der Aerosole}
-
-\addtocontents{toc}{\protect\newpage}
+\input{aerosols/dehs.tex}
+\input{aerosols/dop.tex}
+\input{aerosols/pao.tex}
+\input{aerosols/psl.tex}
+\input{aerosols/evaluation.tex}
 
 %************************************************
 \chapter{Konzepte f\"{u}r den Versuchsaufbau}\label{ch:concepts}
 %************************************************
-\section{Konzept 1}
-\subsection{Aufbau}
-\section{Konzept 2}
-\section{Konzept 3}
-\section{Konzept 4}
-\section{Konzept 5}
+\input{concepts/particle_gen.tex}
+\input{concepts/concept_1.tex}
 
+\addtocontents{toc}{\protect\newpage}
+
+\input{concepts/concept_2.tex}
+\input{concepts/concept_3.tex}
+\input{concepts/concept_4.tex}
+\input{concepts/concept_5.tex}
+\input{concepts/concept_6.tex}
 
 %************************************************
 \chapter{Evaluation}\label{ch:evaluation}
 %************************************************
-
-\section{Analyse der Konzepte}
-\section{Evaluation der Ergebnisse}
+\input{evaluation/compare_concepts.tex}
+\input{evaluation/choose_concept.tex}
+\input{evaluation/construction.tex}
 
 %************************************************
 \chapter{Fazit}\label{ch:conclusion}
 %************************************************
+\input{conclusion/conclusion.tex}
 
 \addcontentsline{toc}{chapter}{\listfigurename}
 
