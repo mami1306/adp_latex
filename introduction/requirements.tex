@@ -26,126 +26,78 @@ F\"{u}r die Generierung eines Partikeltestsignals in Form einer Sprungfunktion l
 
 Die Anforderungsliste ist in Tabelle \ref{anforderungsliste} zu finden. In den nachfolgenden Abschnitten werden die einzelnen Anforderungen genauer erkl\"{a}rt.
 
-\begin{table}
-	\begin{center}
-		\begin{tabular}{| l | l | l | l | l | l |}
-			\hline
-			Anforderung& Nr. & Art & Wert & Einheit & Quelle\\
-			\hline
-			Druck am  & 1 & BF & Eingang - Ausgang & $kPa$ & Datenbl\"{a}tter\\
-			Messger\"{a}tilnet& & & $70 - 103$ (FMPS) & &\\
-			& & & $40 - 103$ (APS) & &\\
-			& & & $<0.746$ (OPS) & &\\
-			& & & $75-105$ (UCPC) & &\\
-			\hline
-			Einstellzeit der & 2 & ZF & 0 & $s$ &selbstgew"{a}hlte\\
-			Partikelanzahlkonzentration & & & & &Last\\
-			der Aerosolquelle & & & & &\\
-			\hline
-			Tr\"{a}gergas& 3 & FF & & & Datenbl\"{a}tter\\
-			- gefilterte Luft & & & & &\\
-			- Inertgas bei UCPC & & & & &\\
-			\hline
-			Volumenstrom & 4 & FF & 10 (FMPS) & $l/min$ & Datenbl\"{a}tter\\
-			(Tr\"{a}gergas) & & & $5 \pm 0.2$ (APS)& &\\
-			& & & $1 \pm 0.05$ (OPS)& &\\
-			& & & $1.5 \pm 0.05$ (UCPC)& &\\
-			\hline
-			Verianzaufkl\"{a}rung& 5 & MF & $>90$ & \% & selbstgew\"{a}hlte\\
-			& & & & & Last\\
-			\hline
-			Tr\"{a}gergastemperatur & 6 & BF & $283.15-325.15$(FMPS) & $K$ & Datenbl\"{a}tter\\
-			& & & $283.15-313.15$(APS) & &\\
-			& & & $273.15-318.15$(OPS) & &\\
-			& & & $283.15-308.15$(UCPC) & &\\
-			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Anforderungsliste f\'{u}r Aerosolquellen}
-	\label{anforderung_aerosolquelle}
-\end{table}	
-
-
-\begin{table}
-	\begin{center}
-		\begin{tabular}{| l | l | l | l | l | l |}
-			\hline
-			Partikelanzahlkonzentration & 7 & BF & $100-10^{7}$ (FMPS)& $n/cm^{3}$ & Datenbl\"{a}tter\\
-			& & & $0-1000$ (APS) & &\\
-			& & & $0-3000$ (OPS) & &\\
-			& & & $0-3\cdot10^{5}$ (UCPC) & &\\
-			\hline
-			Partikelmaterial (Messger\"{a}t) & 8 & W &  &  & Datenblatt APS\\
-			\hline
-			Partikelgr\"{o}{\ss}e & 9 & BF & $5.6-560$ (FMPS) & $nm$ & Datenbl\"{a}tter\\
-			& & & $500-20000$ (APS) & &\\
-			& & & $300-10000$ (OPS) & &\\
-			& & & $2.5-3000$ (UCPC) & &\\
-			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Anforderungsliste f\'{u}r Aerosole}
-	\label{anforderung_aerosol}
-\end{table}			
-			
-\begin{table}
-	\begin{center}
-		\begin{tabular}{| l | l | l | l | l | l |}
-			\hline			
-			Schaltzeit & 10 & ZF & 0 & s & selbstgew\"{a}hlte\\
-			& & & & & Last\\
-			\hline
-			Abs\"{a}tze, abrupte Quer- & 11 & ZF & 0 & n & VDI 3491\\
-			schnitts\"{a}nderungen, & & & & &\\
-			Str\"{o}mungsumlenkungen & & & & &\\
-			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Anforderungsliste f\'{u}r Schaltvorrichtungen}
-	\label{anforderung_schaltvorrichtung}
-\end{table}			
-			
-			
-\begin{table}
-	\begin{center}
-		\begin{tabular}{| l | l | l | l | l | l |}
-			\hline			
-			Weg zwischen Umschaltvorrichtung & 12 & ZF & 0 & m & selbstgew\"{a}hlte\\ 
-			und Messger\"{a}teinlass & & & & & Last\\
-			\hline
-			laminarer Strom & 13 & MF & $< 2300$ & dimensionslos & VDI 3491\\
-			& & ZF & $1500$ & &\\
-			\hline
-			Scnittstelle zum & 14 & FF & 9.5 (FMPS) & $mm$ & Datenbl\"{a}tter\\
-			Messger\"{a}t (Inlet) & & & 19 (APS) & &\\
-			& & & 6.35 (OPS) & &\\
-			& & & 6.4 (UCPC) & &\\
-			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Anforderungsliste f\'{u}r Aerosolleitungen}
-	\label{anforderung_aerosollitung}
-\end{table}			
-			
-			
-\begin{table}
-	\begin{center}
-		\begin{tabular}{| l | l | l | l | l | l |}
-			\hline			
-			minimale Versuchszeit& 15 & ZF & 3300 & $s$ & selbstgew\"{a}hlte\\
-			& & & & & Last\\
-			\hline
-			Kosten & 16 & ZF & 0 & Euro & Festlegung \\
-			& & BF & $0-1000$ & & durch FZD\\
-			\hline
-			Anzahl Messger\"{a}te& 17 & MF & $\geq2$ & n & Festlegung\\
-			& & & & & durch FZD\\
-			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Anforderungsliste f\'{u}r Versuchsaufbauten}
-	\label{anforderung_versuchsaufbau}
-\end{table}
+\begin{longtable}{| l | l | l | l | l | l |}
+	\caption{Anforderungsliste}\label{anforderungen}\\
+	\hline
+	Anforderung& Nr. & Art & Wert & Einheit & Quelle\\
+	\hline
+	Druck am  & 1 & BF & Eingang - Ausgang & $kPa$ & Datenbl\"{a}tter\\
+	Messger\"{a}tilnet& & & $70 - 103$ (FMPS) & &\\
+	& & & $40 - 103$ (APS) & &\\
+	& & & $<0.746$ (OPS) & &\\
+	& & & $75-105$ (UCPC) & &\\
+	\hline
+	Einstellzeit der & 2 & ZF & 0 & $s$ &selbstgew"{a}hlte\\
+	Partikelanzahlkonzentration & & & & &Last\\
+	der Aerosolquelle & & & & &\\
+	\hline
+	Tr\"{a}gergas& 3 & FF & & & Datenbl\"{a}tter\\
+	- gefilterte Luft & & & & &\\
+	- Inertgas bei UCPC & & & & &\\
+	\hline
+	Volumenstrom & 4 & FF & 10 (FMPS) & $l/min$ & Datenbl\"{a}tter\\
+	(Tr\"{a}gergas) & & & $5 \pm 0.2$ (APS)& &\\
+	& & & $1 \pm 0.05$ (OPS)& &\\
+	& & & $1.5 \pm 0.05$ (UCPC)& &\\
+	\hline
+	Verianzaufkl\"{a}rung& 5 & MF & $>90$ & \% & selbstgew\"{a}hlte\\
+	& & & & & Last\\
+	\hline
+	Tr\"{a}gergastemperatur & 6 & BF & $283.15-325.15$(FMPS) & $K$ & Datenbl\"{a}tter\\
+	& & & $283.15-313.15$(APS) & &\\
+	& & & $273.15-318.15$(OPS) & &\\
+	& & & $283.15-308.15$(UCPC) & &\\
+	\hline
+	Partikelanzahlkonzentration & 7 & BF & $100-10^{7}$ (FMPS)& $n/cm^{3}$ & Datenbl\"{a}tter\\
+	& & & $0-1000$ (APS) & &\\
+	& & & $0-3000$ (OPS) & &\\
+	& & & $0-3\cdot10^{5}$ (UCPC) & &\\
+	\hline
+	Partikelmaterial (Messger\"{a}t) & 8 & W &  &  & Datenblatt APS\\
+	\hline
+	Partikelgr\"{o}{\ss}e & 9 & BF & $5.6-560$ (FMPS) & $nm$ & Datenbl\"{a}tter\\
+	& & & $500-20000$ (APS) & &\\
+	& & & $300-10000$ (OPS) & &\\
+	& & & $2.5-3000$ (UCPC) & &\\
+	\hline		
+	Schaltzeit & 10 & ZF & 0 & s & selbstgew\"{a}hlte\\
+	& & & & & Last\\
+	\hline
+	Abs\"{a}tze, abrupte Quer- & 11 & ZF & 0 & n & VDI 3491\\
+	schnitts\"{a}nderungen, & & & & &\\
+	Str\"{o}mungsumlenkungen & & & & &\\
+	\hline			
+	Weg zwischen Umschaltvorrichtung & 12 & ZF & 0 & m & selbstgew\"{a}hlte\\ 
+	und Messger\"{a}teinlass & & & & & Last\\
+	\hline
+	laminarer Strom & 13 & MF & $< 2300$ & dimensionslos & VDI 3491\\
+	& & ZF & $1500$ & &\\
+	\hline
+	Scnittstelle zum & 14 & FF & 9.5 (FMPS) & $mm$ & Datenbl\"{a}tter\\
+	Messger\"{a}t (Inlet) & & & 19 (APS) & &\\
+	& & & 6.35 (OPS) & &\\
+	& & & 6.4 (UCPC) & &\\
+	\hline			
+	minimale Versuchszeit& 15 & ZF & 3300 & $s$ & selbstgew\"{a}hlte\\
+	& & & & & Last\\
+	\hline
+	Kosten & 16 & ZF & 0 & Euro & Festlegung \\
+	& & BF & $0-1000$ & & durch FZD\\
+	\hline
+	Anzahl Messger\"{a}te& 17 & MF & $\geq2$ & n & Festlegung\\
+	& & & & & durch FZD\\
+	\hline
+\end{longtable}
 
 \subsection{Messger\"{a}te}
 Bei der Konzeption der Versuchsaufbauten sollte anfangs darauf geachtet werden, dass mit diesen verschiedene Messger\"{a}te unterschiedlicher Hersteller getestet werden k\"{o}nnen. Im Verlauf des Projekts wurde zur Vereinfachung des Konzeptentwurfs nach Absprache mit dem Auftraggeber sich darauf geeinigt, sich auf die Messger\"{a}te \textbf{Fast Mobility Particle Sizer Spectrometer Model 3091} (kurz FMPS 3091) und \textbf{Optical Particle Sizer Model 3330} (kurz OPS 3330) der Firma \textbf{TSI} zu konzentrieren. Einige der quantifizierten Werte sind daher aus den Handb\"{u}chern f\"{u}r die Anforderungen entnommen worden.
