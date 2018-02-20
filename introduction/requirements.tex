@@ -24,7 +24,81 @@ F\"{u}r die Generierung eines Partikeltestsignals in Form einer Sprungfunktion l
 	\item Versuchsaufbau: Anforderungen an den gesamten Versuchsaufbau inklusive der verwendeten Ger\"{a}te
 \end{enumerate}
 
-Die Anforderungsliste ist in Tabelle \ref{anforderungsliste} zu finden. In den nachfolgenden Abschnitten werden die einzelnen Anforderungen genauer erkl\"{a}rt.
+In den nachfolgenden Abschnitten werden die einzelnen Anforderungen ausf\"{u}hrlich erkl\"{a}rt. Die dazugeh\"{o}rigen Werte sind aus der Anforderungsliste (Tabelle \ref{anforderungen}) zu entnehmen.
+
+\subsection{Messger\"{a}te}
+Bei der Konzeption der Versuchsaufbauten sollte anfangs darauf geachtet werden, dass mit diesen verschiedene Messger\"{a}te unterschiedlicher Hersteller getestet werden k\"{o}nnen. Im Verlauf des Projekts wurde zur Vereinfachung des Konzeptentwurfs nach Absprache mit dem Auftraggeber sich darauf geeinigt, sich auf die Messger\"{a}te \textbf{Fast Mobility Particle Sizer Spectrometer Model 3091} (kurz FMPS 3091) und \textbf{Optical Particle Sizer Model 3330} (kurz OPS 3330) der Firma \textbf{TSI} zu konzentrieren. 
+
+Es bestand dennoch weiterhin die Schwierigkeit geeignete Anforderungen zu identifizieren, die die Versuchsaufbauten erf\"{u}llen m\"{u}ssen, um sie zumindest auf die Ger\"{a}te FMPS 3091 und OPS 3330 anwenden zu k\"{o}nnen. Die Gr\"{u}nde hierf\"{u}r liegen in ihren unterschiedlichen Leistungen und Funktionsrinzipien. Abbildung \ref{verfahren} zeigt einen \"{U}berblick \"{u}ber die heutigen verf\"{u}gbaren Messverfahren. Die Wahl eines Verfahrens h\"{a}ngt unter anderem davon ab, welche Partikelgr\"{o}{\ss}en gemssen werden sollen. 
+
+Optische Partikelz\"{a}hler arbeiten nach dem physikalischen Prinzip, dass beleuchtete Partikel das Licht aus seiner urspr\"{u}nglichen Ausbreitungsrichtung ablenken (Abbildung \ref{optisch}). Bei diesen passiert jeder einzelne Partikel ein Messvolumne, in dem er von Licht bestrahlt wird und dann mit Hilfe eines Detektors die Intensit\"{a}t des gestreuten Lichts und die Anzahl der gestreuten Lichtimpulse gemessen. Die Intensit\"{a}t l\"{a}sst Aufschl\"{u}sse \"{u}ber die Partikelgr\"{o}{\ss}e ziehen, bei einem bekannten Volumenstrom und vordefinierter Messdauer l\"{a}sst sich \"{u}ber die Anzahl der Lichtimpulse die Partikelkonzentration bestimmen. Bei moderneren Ger\"{a}ten wie dem OPS 3330 geschieht die optische Messung mit Hilfe eines Laser (Abbildung \ref{laser}). Hierbei kommt zus\"{a}tzlich ein Parabolspiegel hinzu, mit dem das gestreute Licht von einem Detektor gesammelt wird. Bei diesem Messprinzip ist es wichtig, dass jeder Partikel das Messvolumen einzeln durchlaufen muss. Falls zwei oder mehr Partikel das Messvolumen gleichzeitig durchlaufen, werden sie als ein Gro{\ss}es gewertet. Dieser Effekt wird als Koinzidenz bezeichnet. Es existieren zwei Methoden, um diesen Effekt zu vermeiden. Die erste Methode arbeitet aerodynamisch, bei welcher der Aerosolstrahl von einem Mantel aus reiner Luft umgeben ist und mittels einer Ansaugd\"{u}se als d\"{u}nner Strahl austritt (Abbildung \ref{aerodynamisch}).\\
+Die zweite Methode arbeitet rein optisch mit Hilfe von zwei Blenden, die den Bereich des zu empfangenden Lichts einschr\"{a}nken (Abbildung \ref{optisch_trennung}).
+
+Elektrische Pertikelz\"{a}hler wie der FMPS 3091 hingegen ben\"{o}tigen keine speziellen Techniken, um Partikel einzeln zu erfassen. Beim FMPS 3091 werden die Partikel positiv aufgeladen und dann mit einem reinen Luftstrom in das Messvolumen gef\"{u}hrt, in welchem sich eine Elektrode befindet und ein elektrisches Feld erzeugt. Elektrometer, welche um die Eletrode angebracht sind und verschieden emfindlich sind, messen die geladenen Partikel (Abbildung \ref{elektrisch}).
+
+Ein wesentlicher Leistungsunterschied zwischen dem FMPS 3091 und OPS 3330 ist das Volumen des Aerosol-Luftgemisches, welches von beiden im Verh\"{a}ltnis 1:4 angesaugt wird. Der OPS arbeitet mit $5 L/min$, w\"{a}rend der FMPS mit $50 L/min$ arbeitet. Ein Teil des Luftgemisches wird dabei vom Ger\"{a}t gefiltert und dazu genutzt, den Aerosolstrom zum Messvolumen zu f\"{u}hren.     
+
+\subsection{Aerosolquelle}
+Die Aerosolquelle liefert mit dem Aerosol, den entscheidenden Faktor zum Partikelanzahlkonzentrationssprungs. Aus den Arbeitsbereichsbegrenzungen der Messger\"{a}te sowie allgemeiner Richtlinien zur Aerosolgenerierung ergeben sich folgende Anforderungen:
+
+\begin{itemize}
+\item 1. Da die internen Pumpen, weche den Volumenstrom der Messger\"{a}te regulieren, nur innerhal eines bestimmten Druckbereiches korrekt arbeiten, darf der Aerosoldruck an den Einl\"{a}ssen der Messger\"{a}te diesen nicht verlassen. Dies kann durch die Aerosolquelle, Aerosolleitungen und Schaltvorrichtungen beeinflusst werden. 
+
+\item 2. Die Einstellzeit einer Leistungskenngr\"{o}{\ss}e beschreibt das dynamische Verhalten der Aerosolquelle bez\"{u}glich dieser Gr\"{o}{\ss}e bei sprungf\"{o}rmigen \"{A}nderungen eines Einstellparameters. Dabei ist vor allem die Einstellzeit der Partikelanzahlkonzentration für den Versuchsaufbau von Interesse.(Quelle: VDI 3491)
+
+\item 3. Um die Funktionen der Messger\"{a}te und die Messergebnisse nicht zu beeintr\"{a}chtigen, wird als Tr\"{a}gergas gereinigte Luft verwendet, was ebenfalls der Gebrauchsanweisung der verwendeten Messger\"{a}te entspricht. 
+
+\item 4. Die Messger\"{a}te arbeiten mit einem fest vorgegebenen Volumenstrom des Tr\"{a}gergases. Daher muss sichergestellt werden, dass die Aerosolquelle diesen auch bereitstellen kann, da es ansonsten zu einer Fehlfunktion der Messger\"{a}te kommt. 
+
+\item 5. Da die Temperatur des Aerosols den Messprozess und die Eigenschaften des Aerosolstromes beeinflusst, sind durch die Hersteller der Messger\"{a}te feste Temperaturbereiche vorgegeben, in denen sich das Tr\"{a}gergas und das Aerosol befinden d\"{u}rfen.  
+\end{itemize}
+
+\subsection{Aerosol}
+Folgende Anforderung an das Aerosol ergeben sich aus den Arbeitsbereichsbegrenzungen und aus der statistischen Verwertbarkeit der Messwerte zur Berechnung des zeitlichen Verhaltens der Messger\"{a}te:
+
+\begin{itemize}
+\item 6. Die Partikelkonzentration, welche die Aerosolquelle liefert, muss sich innerhalb des Bereiches befinden, der von den Messger\"{a}ten angegeben ist. Eine zu hohe Partikelkonzentration kann bei optischen Messger\"{a}ten zu Koinzidenz f\"{u}hren, bei elektrischen Messger\"{a}ten k\"{o}nnen Partikel durch eine zu geringe Konzentration im Grundrauschen untergehen.
+
+\item 7. Da einige Partikelmaterialien f\"{u}r bestimmte Messverfahren nicht geeignet sind und zus\"{a}tzlich geseundheits- oder umweltgef\"{a}hrdend sein k\"{o}nnen, ist es wichtig ein geeignetes Material hierf\"{u}r zu finden. Da die hier benutzten Messgeräte vor allem für die Feinstaubmessung benutzt werden, bieten sich zum Beispiel feste Materialien für die Aerosole an.
+
+\item 8. Auf die Gr\"{o}{\ss}e der Partikel ist zu achten, da zu kleine von einigen Messger\"{a}ten nicht erkannt werden k\"{o}nnen und zu gro{\ss}e die Funktion beeintr\"{a}chtigen k\"{o}nnen.
+\end{itemize}
+
+\subsection{Schaltvorrichtung}
+Die Schaltvorrichtung ist das entscheidende Bauteil beim Erzeugen der Sprungfunktion. Dabei sind ein schneller Schaltprozess aber auch ein str\"{o}mungsg\"{u}nstiges Design für die G\"{u}te der Schaltvorrichtung die ausschlaggebenden Kriterien. Auch das Material kann hierbei eine Rolle spielen. Folgende Anforderungen lassen sich definieren:
+
+\begin{itemize}
+	\item 9. DIe Zeit, die die Vorrichtung ben\"{o}tigt um von einem Schaltzustand in den anderen zu wechseln, sollte so kurz wie m\"{o}glich sein. Diese Schaltzeit tr\"{a}gt zur Totzeit des Versuchsaufbaus bei. 
+	
+	\item 10. Hochwinklige Umlenkungen und abrupte Querschnitts\"{a}nderungen k\"{o}nnen zu Partikel- und Druckverlusten f\"{u}hren. Somit k\"{o}nnen sie die G\"{u}te der Partikelfront beeinflussen und sollten deswegen vermieden werden. Au{\ss}erdem kann es bei einem ung\"{u}nstigen Design der Schaltvorrichtung zu Turbulenzen in ihrem Inneren kommen, was die Berechenbarkeit der Totzeit des Aufbaus erheblich erschwert. Die vorhergehenden \"{U}berlegungen gelten auch für die Auslegung der Aerosolleitung.
+\end{itemize}
+
+\subsection{Aerosolleitungen}
+Auch bei der Leitung des Aerosols, ist auf eine str\"{o}mungsg\"{u}nstige Auslegung zu achten. Dies betrifft die Ausma{\ss}e, das Material, den Zustand der Innenfl\"{a}chen und die r\"{a}umliche F\"{u}hrung der einzelnen Verbindungen. Die folgenden Anforderungen k\"{o}nnen also auch als Designkriterien angesehen werden:
+
+\begin{itemize}
+\item 11. Der Weg zwischen der Umschaltvorrichtung und dem Messger\"{a}teeinlass f\"{u}hrt bei gegebenen Volumenstr\"{o}men, abh\"{a}ngig von dem benutzten Messger\"{a}t, zu einer Verz\"{o}gerungszeit, die sich in der Totzeit des Versuchsaufbaus niederschl\"{a}gt. Da das Str\"{o}mungsverhalten in den Verbindungen nur unter Annahme von Vereinfachungen zutrifft, gilt: Umso l\"{a}nger der Weg ist, umso gr\"{o}{\ss}er ist der Rechenfehler bei der Berechnung der Totzeit. Au{\ss}erdem f\"{u}hren Druck- und Partikelverluste auf diesem Weg zu einer Verzerrung der Partikelfront. (VDI 3491)
+
+\item 12. Da eine turbulente Str\"{o}mung zu einem analytisch kaum berechenbaren Verhalten der Str\"{o}mung f\"{u}hrt, ist der Versuchsaufbau so zu gestalten, dass sich die Str\"{o}mung m\"{o}glichst laminar verh\"{a}lt.(VDI 3491) Vor allem am Einlass der Messger\"{a}te, wo es zu einem Querschnitts\"{u}bergang kommen kann, sollten entsprechend gestaltete Adapter daf\"{u}r Sorge tragen.
+
+\item 13. Die Messger\"{a}te besitzen einen Aerosoleinlass in Form eines R\"{o}hrchens mit unterschiedlichen Durchmessern, welches aus ihren Geh\"{a}usen ragt. Je nach Versuchsaufbau k\"{o}nnen Adapter von N\"{o}ten sein, um eine direkte Verbindung zwischen der Schaltvorrichtung und dem Messger\"{a}t zu gew\"{a}hrleisten. Bei der Gestaltung dieser Adapter muss ein Kompromiss zwischen Anforderung 12 und 13 eingegangen werden.
+\end{itemize}
+
+\subsection{Versuchsaufbau}
+Folgende Anforderungen betreffen den Versuchsaufbau als ganzes:
+
+\begin{itemize}
+\item 14. Die minimale Versuchszeit ist wichtig in der Versuchsplanung, da durch die Messaufl\"{o}sung der Messger\"{a}te von einer Sekunde die Anzahl der Messwerte je nach Versuchsaufbau begrenzt ist. Eine Versuchsdurchf\"{u}hrung kann mehrere Abl\"{a}ufe (abwechselnd: gereinigte Luft (zb. 5 s) -- Aerosol(zb. 30s)) haben und innerhalb eines Ablaufs wiederum mehrere Messungen (der Partikelanzahl) stattfinden. Je nach Varianz der Partikelanzahl sind eine bestimmte Anzahl von Messungen und Messabl\"{a}ufen von N\"{o}ten, um ein valides Ergebnis für die Zeitkonstante zu erhalten. So sollte der Aufbau ca. 100 Abl\"{a}ufe mit je 30 Partikelanzahlmessungen (+ 5 Sekunden gereinigte Luft pro Ablauf) mit reproduzierbaren Ergebnissen liefern k\"{o}nnen.
+
+\item 15. Aus wirtschaftlicher Sicht sind die Kosten ein ausschlaggebender Faktor für die G\"{u}te des Aufbaus. Sie setzen sich aus den Materialkosten selbstgestalteter und eventuell selbstgebauter Teile, den Kosten für Zukaufteile (z.B. Filter, Verdichter, Aerosolgeneratoren etc.) und den Kosten f\"{u}r Ressourcen, wie Strom, Aerosol etc., zusammen. Die maximalen Kosten d\"{u}rfen die vorgegebenen Mittel des Fachbereiches nicht \"{u}berschreiten.
+
+\item 16. Ziel des Aufbaus ist die Evaluation der Dynamik von Messger\"{a}ten. Von den f\"{u}nf f\"{u}r diesen Zweck ausgesuchten Messger\"{a}ten, wurden vor allem der FMPS 3091 und der OPS 3330 f\"{u}r geeignet befunden(Fachbereich Fahrzeugdynamik).
+Der Versuchsaufbau soll mindestens f\"{u}r diese beiden Messger\"{a}te valide Ergebnisse liefern. Jedes weitere, welches durch den Aufbau erfolgreich getestet werden kann, erh\"{o}ht dessen wirtschaftlichen und wissenschaftlichen Wert. 
+
+\item 17. Der Versuchsaufbau soll m\"{o}glichst unabh\"{a}ngig von Umgebungsbedingungen sein, um eine vielseitige Einsetzbarkeit zu gew\"{a}hrleisten. Zus\"{a}tzlich sollte er ohne gro{\ss}en Mehraufwand den Einsatzort wechseln und dort in Betrieb genommen werden k\"{o}nnen. Da aber Konzepte mit sation\"{a}ren Bauteilen vorstellbar und die verwendeten Messger\"{a}te transportabel sind, ist dieser Punkt der Funktionalit\"{a}t der Einrichtung untergeordnet.
+
+\item 18. Die Pr\"{u}fung des dynamischen Verhaltens der Messger\"{a}te soll durch ein gezieltes Ver\"{a}ndern der Eingangsparameters (Eigenschaften des Eingangsstroms) erfolgen. Dies erfolgt bei den hiesigen Versuchseinrichtungen prim\"{a}r durch die Variation der Partikelkonzentration. Da allerdings die ausgegebenen Daten vieler Messger\"{a}te nur ab einer bestimmten Partikelkonzentration aussagekr\"{a}ftig sind, muss die Anzahlkonzentratinsdifferenz mindestens der spezifischen Partikelkonzentration der Messger\"{a}te entsprechen. 
+\end{itemize}
 
 \begin{longtable}{| l | l | l | l | l | l |}
 	\caption{Anforderungsliste}\label{anforderungen}\\
@@ -32,7 +106,7 @@ Die Anforderungsliste ist in Tabelle \ref{anforderungsliste} zu finden. In den n
 	Anforderung& Nr. & Art & Wert & Einheit & Quelle\\
 	\hline
 	Druck am  & 1 & BF & Eingang - Ausgang & $kPa$ & Datenbl\"{a}tter\\
-	Messger\"{a}tilnet& & & $70 - 103$ (FMPS) & &\\
+	Messger\"{a}teinlass& & & $70 - 103$ (FMPS) & &\\
 	& & & $40 - 103$ (APS) & &\\
 	& & & $<0.746$ (OPS) & &\\
 	& & & $75-105$ (UCPC) & &\\
@@ -43,125 +117,64 @@ Die Anforderungsliste ist in Tabelle \ref{anforderungsliste} zu finden. In den n
 	\hline
 	Tr\"{a}gergas& 3 & FF & & & Datenbl\"{a}tter\\
 	- gefilterte Luft & & & & &\\
-	- Inertgas bei UCPC & & & & &\\
 	\hline
 	Volumenstrom & 4 & FF & 10 (FMPS) & $l/min$ & Datenbl\"{a}tter\\
 	(Tr\"{a}gergas) & & & $5 \pm 0.2$ (APS)& &\\
 	& & & $1 \pm 0.05$ (OPS)& &\\
 	& & & $1.5 \pm 0.05$ (UCPC)& &\\
 	\hline
-	Verianzaufkl\"{a}rung& 5 & MF & $>90$ & \% & selbstgew\"{a}hlte\\
-	& & & & & Last\\
-	\hline
-	Tr\"{a}gergastemperatur & 6 & BF & $283.15-325.15$(FMPS) & $K$ & Datenbl\"{a}tter\\
+	Tr\"{a}gergastemperatur & 5 & BF & $283.15-325.15$(FMPS) & $K$ & Datenbl\"{a}tter\\
 	& & & $283.15-313.15$(APS) & &\\
 	& & & $273.15-318.15$(OPS) & &\\
 	& & & $283.15-308.15$(UCPC) & &\\
 	\hline
-	Partikelanzahlkonzentration & 7 & BF & $100-10^{7}$ (FMPS)& $n/cm^{3}$ & Datenbl\"{a}tter\\
+	Partikelanzahlkonzentration & 6 & BF & $100-10^{7}$ (FMPS)& $n/cm^{3}$ & Datenbl\"{a}tter\\
 	& & & $0-1000$ (APS) & &\\
 	& & & $0-3000$ (OPS) & &\\
 	& & & $0-3\cdot10^{5}$ (UCPC) & &\\
 	\hline
-	Partikelmaterial (Messger\"{a}t) & 8 & W &  &  & Datenblatt APS\\
+	Partikelmaterial (Messger\"{a}t) & 7 & W &  &  & Datenblatt APS\\
+	- feste Schwebeteilchen in Luft & & & & &\\
+	- nicht fl\"{u}chtige, fl\"{u}ssige Teilchen & & & & &\\
 	\hline
-	Partikelgr\"{o}{\ss}e & 9 & BF & $5.6-560$ (FMPS) & $nm$ & Datenbl\"{a}tter\\
+	Partikelgr\"{o}{\ss}e & 8 & BF & $5.6-560$ (FMPS) & $nm$ & Datenbl\"{a}tter\\
 	& & & $500-20000$ (APS) & &\\
 	& & & $300-10000$ (OPS) & &\\
 	& & & $2.5-3000$ (UCPC) & &\\
 	\hline		
-	Schaltzeit & 10 & ZF & 0 & s & selbstgew\"{a}hlte\\
+	Schaltzeit & 9 & ZF & 0 & s & selbstgew\"{a}hlte\\
 	& & & & & Last\\
 	\hline
-	Abs\"{a}tze, abrupte Quer- & 11 & ZF & 0 & n & VDI 3491\\
+	Abs\"{a}tze, abrupte Quer- & 10 & ZF & 0 & n & VDI 3491\\
 	schnitts\"{a}nderungen, & & & & &\\
 	Str\"{o}mungsumlenkungen & & & & &\\
 	\hline			
-	Weg zwischen Umschaltvorrichtung & 12 & ZF & 0 & m & selbstgew\"{a}hlte\\ 
+	Weg zwischen Umschaltvorrichtung & 11 & ZF & 0 & m & selbstgew\"{a}hlte\\ 
 	und Messger\"{a}teinlass & & & & & Last\\
 	\hline
-	laminarer Strom & 13 & MF & $< 2300$ & dimensionslos & VDI 3491\\
+	laminarer Strom & 12 & MF & $< 2300$ & dimensionslos & VDI 3491\\
 	& & ZF & $1500$ & &\\
 	\hline
-	Scnittstelle zum & 14 & FF & 9.5 (FMPS) & $mm$ & Datenbl\"{a}tter\\
+	Scnittstelle zum & 13 & FF & 9.5 (FMPS) & $mm$ & Datenbl\"{a}tter\\
 	Messger\"{a}t (Inlet) & & & 19 (APS) & &\\
 	& & & 6.35 (OPS) & &\\
 	& & & 6.4 (UCPC) & &\\
 	\hline			
-	minimale Versuchszeit& 15 & ZF & 3300 & $s$ & selbstgew\"{a}hlte\\
+	minimale Versuchszeit& 14 & ZF & 3300 & $s$ & selbstgew\"{a}hlte\\
 	& & & & & Last\\
 	\hline
-	Kosten & 16 & ZF & 0 & Euro & Festlegung \\
+	Kosten & 15 & ZF & 0 & Euro & Festlegung \\
 	& & BF & $0-1000$ & & durch FZD\\
 	\hline
-	Anzahl Messger\"{a}te& 17 & MF & $\geq2$ & n & Festlegung\\
+	Anzahl Messger\"{a}te& 16 & MF & $\geq2$ & n & Festlegung\\
 	& & & & & durch FZD\\
 	\hline
+	Transportabel& 17 & W &  &  & Festlegung\\
+	& & & & & durch FZD\\
+	\hline
+	Partikelanzahldifferenz zwischen& 18 & MF & $>100$ (FMPS) & $n/cm^{3}$ & Datenbl\"{a}tter/\\
+	gefiltertem und konditioniertem & & & $> 1$ (APS) & & Aufgabenstellung\\
+	Luftstrom & & & $> 1$ (OPS)& &\\
+	& & & $> 1 (UCPC)$ & &\\
+	\hline
 \end{longtable}
-
-\subsection{Messger\"{a}te}
-Bei der Konzeption der Versuchsaufbauten sollte anfangs darauf geachtet werden, dass mit diesen verschiedene Messger\"{a}te unterschiedlicher Hersteller getestet werden k\"{o}nnen. Im Verlauf des Projekts wurde zur Vereinfachung des Konzeptentwurfs nach Absprache mit dem Auftraggeber sich darauf geeinigt, sich auf die Messger\"{a}te \textbf{Fast Mobility Particle Sizer Spectrometer Model 3091} (kurz FMPS 3091) und \textbf{Optical Particle Sizer Model 3330} (kurz OPS 3330) der Firma \textbf{TSI} zu konzentrieren. Einige der quantifizierten Werte sind daher aus den Handb\"{u}chern f\"{u}r die Anforderungen entnommen worden.
-
-Beide Messger\"{a}te saugen sich ihre ben\"{o}tigten Aerosol-Luft-Gemisch Mengen \"{u}ber interne Pumpen an. Beim FMPS 3091 betr\"{a}gt dies insgesamt $50 L/min$, wovon $10 L/min$ auf das Aerosol und $40 L/min$ auf Luft entfallen, w\"{a}hrend der OPS 3330 jeweils $1 L/min$ Luft und Aerosol ben\"{o}tigt. Hauptunterschied zwischen den beiden Ger\"{a}ten sind ihre Mechanismen, mit denen Partikel detektiert werden. Der FMPS 3091 misst die elektrostatische Ladung einzelner Partikel, w\"{a}hrend der OPS 3330 ein optisches Verfahren anwendet. Weitere Unterschiede liegen in der Gr\"{o}{\ss}enverteilung der Partikel, bei denen die jeweiligen Messger\"{a}te noch korrekt funktionieren und der Partikelkonzentration. 
-
-Aus diesen und weiteren Werten ergeben sich die nachfolgenden Anforderungen, die die Versuchsaufbauten zu erf\"{u}llen haben. Hierbei wurde immer versucht eine Schnittmenge zwischen den Wertebereichen der Messger\"{a}te zu finden nach der sich die Anforderungen richten um so garantieren zu k\"{o}nnen, dass die Pr\"{u}fst\"{a}nde auf mehrere Messger\"{a}te anwendbar sind.   
-
-\subsection{Aerosolquelle}
-Die Aerosolquelle liefert mit dem Aerosol, den entscheidenden Faktor zum Partikelanzahlkonzentrationssprungs. Aus den Arbeitsbereichsbegrenzungen der Messger\"{a}te sowie allgemeiner Richtlinien zur Aerosolgenerierung ergeben sich folgende Anforderungen:
-
-\begin{itemize}
-\item 1. Die internen Pumpen, welche den Volumenstrom der Messger\"{a}te regulieren, arbeiten nur in einem bestimmten Druckbereich korrekt (Quelle: Datenbl\"{a}tter). Dieser Druckbereich begrenzt wiederum den Aerosoldruck, welcher am Messger\"{a}t-Einlass herrschen darf. Es ist darauf zu achten, dass die Aerosolquelle diesen Druckbereich einh\"{a}lt. 
-Auch das Design der Aerosolleitungen und der Schaltvorrichtung beeinflussen den Druck am Messgerät-Einlass (Quelle: TSL-Skript).
-
-\item 2. Die Einstellzeit einer Leistungskenngr\"{o}{\ss}e beschreibt das dynamische Verhalten der Aerosolquelle bez\"{u}glich dieser Gr\"{o}{\ss}e bei sprungf\"{o}rmigen \"{A}nderungen eines Einstellparameters. Dabei ist vor allem die Einstellzeit der Partikelanzahlkonzentration für den Versuchsaufbau interessant.(Quelle: VDI 3491)
-
-\item 3. Das Tr\"{a}gergas der Aerosole hat einen gro{\ss}en Einfluss auf das Messverhalten der Messger\"{a}te.  Für den Versuchsaufbau kommt vor allem gereinigte Luft als Tr\"{a}gergas in Frage, da diese auch bei der Messung der Bremspartikel als Tr\"{a}gergas fungiert und die ausgew\"{a}hlten Messger\"{a}te mit Luft oder Inertgas (UCPC) arbeiten. (Quelle: Datenbl\"{a}tter)
-
-\item 4. Die Messger\"{a}te arbeiten mit einem fest vorgegebenen Volumenstrom des Tr\"{a}gergases.  Es muss gew\"{a}hrleistet sein, dass die Aerosolquelle einen entsprechenden Strom bereitstellen kann. Sollte der Volumenstrom den Anforderungen nicht entsprechen, generieren die Messger\"{a}te eine Fehlermeldung und liefern keine Messwerte mehr. (Handb\"{u}cher)
-
-\item 5. Varianzaufkl\"{a}rung ist ein Maß Für die G\"{u}te eines Mathematischen Modells. Sie sagt aus inwieweit dieses Modell die Streuung von Messdaten erkl\"{a}ren kann. In dem Versuchsaufbau trifft sie eine Aussage über die Abh\"{a}ngigkeit der ben\"{o}tigten Anzahl der Messwerte und der Varianz der Partikelanzahkonzentratioslwerte des Stromes.
-
-\item 6. Die Tr\"{a}gergastemperatur kann je nach Aerosolquelle verschiedene Werte annehmen. Da die Temperatur des Aerosols den Messprozess und die Eigenschaften des Aerosolstromes beeinflusst, geben die Messger\"{a}tehersteller feste Temperaturgrenzen vor zwischen welchen sich diese Temperatur bewegen darf.(Datenbl\"{a}tter)
-\end{itemize}
-
-\subsection{Aerosol}
-Folgende Anforderung an das Aerosol ergeben sich aus den Arbeitsbereichsbegrenzungen der Messger\"{a}te und aus der statistischen Verwertbarkeit der Messwerte zur Berechnung des zeitlichen Verhaltens der Messger\"{a}te:
-
-\begin{itemize}
-\item 7. Eine zu hohe Partikelanzahlkonzentration führt zu einer H\"{a}ufung von falschen Messergebnissen zum Beispiel durch Koinzidenz bei optischen Sensoren. Messergebnisse bei einer zu niedrigen Partikelanzahlkonzentration k\"{o}nnen bei Messger\"{a}ten, welche mit elektrischen Feldern arbeiten, in dem herrschenden, systematischen Grundrauschen untergehen(Quelle: Handb\"{u}cher). Somit muss f\"{u}r verwertbare Ergebnisse die Partikelanzahlkonzentration des Aerosols mit dem benutzten Messgerät abgeglichen werden.
-
-\item 8. Partikelmaterialien k\"{o}nnen Gesundheits- oder Umweltgef\"{a}hrdend sein oder aufgrund von ihren Eigenschaften f\"{u}r bestimmte Messverfahren nicht geeignet sein.(VDI 3491) Deswegen ist es wichtig das benutzte Partikelmaterial zu kennen. Da die hier benutzten Messgeräte vor allem für die Feinstaubmessung benutzt werden, bieten sich zum Beispiel feste Materialien für die Aerosole an.
-
-\item 9. Zu kleine Partikel k\"{o}nnen von den Messsystemen der Partikelz\"{a}hler nicht erfasst werden, w\"{a}hrend zu gro{\ss}e Partikel durch Verstopfen der Filter die Funktion beeintr\"{a}chtigen k\"{o}nnen (Datenbl\"{a}tter). Manche Hersteller geben an, dass zu große Partikel zwar gez\"{a}hlt werden, aber nicht mehr in die Gr\"{o}{\ss}enverteilung mit eingehen.(Datenblatt FMPS) Trotzdem sollte zur Sicherheit ein Zyklonabscheider dem System zugeschaltet werden, wenn nicht garantiert werden kann, dass nicht zu viele zu gro{\ss}e Partikel im Aerosol sind.
-\end{itemize}
-
-\subsection{Schaltvorrichtung}
-Die Schaltvorrichtung ist das entscheidende Bauteil beim Erzeugen der Sprungfunktion. Dabei sind ein schneller Schaltprozess aber auch ein str\"{o}mungsg\"{u}nstiges Design für die G\"{u}te der Schaltvorrichtung die ausschlaggebenden Kriterien. Auch das Material kann hierbei eine Rolle spielen. Folgende Anforderungen lassen sich definieren:
-
-\begin{itemize}
-	\item 10. DIe Zeit, die die Vorrichtung ben\"{o}tigt um von einem Schaltzustand in den anderen zu wechseln, sollte so kurz wie m\"{o}glich sein. Diese Schaltzeit tr\"{a}gt zur Totzeit des Versuchsaufbaus bei. 
-	
-	\item 11. Hochwinklige Umlenkungen und abrupte Querschnitts\"{a}nderungen k\"{o}nnen zu Partikel- und Druckverlusten f\"{u}hren. Somit k\"{o}nnen sie die G\"{u}te der Partikelfront beeinflussen und sollten deswegen vermieden werden. Außerdem kann es bei ung\"{u}nstigem Design der Schaltvorrichtung zu Turbulenzen in ihrem Inneren kommen, was die Berechenbarkeit der Totzeit des Aufbaus erheblich erschwert. (HIwis vom Windkanal) Die vorhergehenden \"{U}berlegungen gelten auch für die Auslegung der Aerosolleitung.
-\end{itemize}
-
-\subsection{Aerosolleitungen}
-Auch bei der Leitung des Aerosols, ist auf eine str\"{o}mungsg\"{u}nstige Auslegung zu achten. Dies betrifft die Ausma{\ss}e, das Material, den Zustand der Innenfl\"{a}chen und die r\"{a}umliche F\"{u}hrung der einzelnen Verbindungen. Die folgenden Anforderungen k\"{o}nnen also auch als Designkriterien angesehen werden:
-
-\begin{itemize}
-\item 12. Der Weg zwischen der Umschaltvorrichtung und dem Messger\"{a}teeinlass f\"{u}hrt bei gegebenen Volumenstr\"{o}men, abh\"{a}ngig von dem benutzten Messger\"{a}t, zu einer Verz\"{o}gerungszeit, die sich in der Totzeit des Versuchsaufbaus niederschl\"{a}gt. Da das Str\"{o}mungsverhalten in den Verbindungen nur unter Annahme von Vereinfachungen zutrifft, gilt: Umso l\"{a}nger der Weg ist, umso gr\"{o}{\ss}er ist der Rechenfehler bei der Berechnung der Totzeit. Außerdem f\"{u}hren Druck- und Partikelverluste auf diesem Weg zu einer Verzerrung der Partikelfront. (VDI 3491)
-
-\item 13. Da eine turbulente Str\"{o}mung zu einem analytisch kaum berechenbaren Verhalten der Str\"{o}mung f\"{u}hrt, ist der Versuchsaufbau so zu gestalten, dass sich die Str\"{o}mung m\"{o}glichst \"{u}berall laminar verh\"{a}lt.(VDI 3491) Vor allem am Messger\"{a}te- Einlass, wo es zu einem Querschnitts\"{u}bergang kommen kann, sollten entsprechend gestaltete Adapter daf\"{u}r Sorge tragen.
-
-\item 14. Die Messger\"{a}te besitzen einen Aerosoleinlass in Form eines R\"{o}hrchens mit unterschiedlichen Durchmessern, welches in die Umgebung ragt (Datenbl\"{a}tter/Handb\"{u}cher). Je nach Versuchsaufbau k\"{o}nnen Adapter von N\"{o}ten sein, um eine direkte Verbindung zwischen Schaltvorrichtung und Messger\"{a}t zu gew\"{a}hrleisten. Bei der Gestaltung dieser Adapter muss ein Kompromiss zwischen Anforderung 12 und 13 eingegangen werden.
-\end{itemize}
-
-\subsection{Versuchsaufbau}
-Folgende Anforderungen betreffen den Versuchsaufbau als ganzes:
-
-\begin{itemize}
-\item 15. Die minimale Versuchszeit ist wichtig in der Versuchsplanung, da durch die Messaufl\"{o}sung der Messger\"{a}te von einer Sekunde, die Anzahl der Messwerte je nach Versuchsaufbau begrenzt ist. Nun kann eine Versuchsdurchf\"{u}hrung aus mehreren Abl\"{a}ufen (abwechselnd: gereinigte Luft (zb. 5 s) -- Aerosol(zb. 30s)) und die Abl\"{a}ufe wiederum aus mehreren Messungen (der Partikelanzahl) bestehen. Je nach Varianz der Partikelanzahl, sind eine bestimmte Anzahl von Messungen und Messabl\"{a}ufen von N\"{o}ten um ein valides Ergebnis für die Zeitkonstante zu erhalten. So sollte der Aufbau ca. 100 Abl\"{a}ufe mit je 30 Partikelanzahlmessungen (+ 5 Sekunden gereinigte Luft pro Ablauf) mit reproduzierbaren Ergebnissen liefern k\"{o}nnen.
-
-\item 16. Aus wirtschaftlicher Sicht, sind die Kosten ein ausschlaggebender Faktor für die G\"{u}te des Aufbaus. Sie setzen sich aus den Materialkosten selbstgestalteter und eventuell selbstgebauter Teile, den Kosten für Zukaufteile, wie Filter, Verdichter, Aerosolgeneratoren etc. und den Kosten f\"{u}r Ressourcen, wie Strom, Aerosol etc., zusammen. Die maximalen Kosten d\"{u}rfen die vorgegebenen Mittel des Fachbereiches nicht \"{u}berschreiten. (Fachbereich Fahrzeugdynamik)
-
-\item 17. Ziel des Aufbaus ist die Evaluation der Dynamik von Messger\"{a}ten, welche f\"{u}r Messungen von Bremspartikeln am Schwungmassenpr\"{u}fstand ben\"{o}tigt werden. Von den f\"{u}nf f\"{u}r diesen Zweck ausgesuchten Messger\"{a}ten, wurden vor allem der FMPS 3091 und der OPS 3330 f\"{u}r geeignet befunden(Fachbereich Fahrzeugdynamik). Nun sollen die, durch den hier konstruierten Versuchsaufbau, ermittelten Werte zumindest f\"{u}r diese beiden Ger\"{a}te ein valides Ergebnis darstellen. Jedes weitere Messger\"{a}t, das durch den Aufbau erfolgreich getestet werden kann, erh\"{o}ht dessen wirtschaftlichen und wissenschaftlichen Wert.
-\end{itemize}
