@@ -3,7 +3,7 @@
 *.aux
 *.txt
 *.out
-*.pdf
+adp.pdf
 *.gz
 *.toc
 *.log
