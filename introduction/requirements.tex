@@ -13,11 +13,12 @@ Bei den festgelegten Anforderungen war uns eine genaue Quantifizierung der Werte
 	
 	\item \textbf{Wunsch} (W): Da es sich um einen Wunsch handelt, ist die Wichtigkeit des Merkmals vergleichsweise gering. Die Anforderung sollte dann allerdings einen bestimmten Wert aufweisen und wird bei der Bewertung positiv ber\"{u}cksichtigt. 
 \end{enumerate}
-Die Anforderungen lassen sich in die Kategorien \textbf{Forderung} und \textbf{Wunsch} einteilen, besonders wichtig ist hierbei eine genaue Quantifizierung der einzelnen Anforderungen wann immer es m\"{o}glich ist. Forderungen m\"{u}ssen auf jeden Fall von allen Versuchsaufbaukonzepten eingehalten werden, um das Ziel erreichen zu k\"{o}nnen. W\"{u}nsche hingegen k\"{o}nnen, m\"{u}ssen aber nicht von den Versuchsaufbauten erf\"{u}llt werden.\\
 F\"{u}r die Generierung eines Partikeltestsignals in Form einer Sprungfunktion lassen sich die folgenden Anforderungen festlegen, die sich in drei Kategorien unterteilen lassen:
 \begin{enumerate}
+	\item \textbf{Aerosolquelle}: Anforderungen an die Quelle, welche das Pr\"{u}faerosol erzeugt
 	\item \textbf{Aerosol}: Anforderungen an das Pr\"{u}faerosol, welches dem zu testenden Messger\"{a}t zugef\"{u}hrt wird
-	\item \textbf{Aerosolquelle-Messger\"{a}t-Schnittstelle}: Anforderungen an die Schnittstelle, welche die Aerosolquelle mit dem Messger\"{a}t verbindet
+	\item \textbf{Schaltvorrichtung}: Anforderungen an die Schaltvorrichtung, welche den Partikelsprung erm\"{o}glicht 
+	\item \textbf{Aerosolleitungen}: Anforderungen an die Schnittstelle, welche die Aerosolquelle mit dem Messger\"{a}t verbindet
 	\item \textbf{Versuchsaufbau}: Anforderungen an den gesamten Versuchsaufbau inklusive der verwendeten Ger\"{a}te
 \end{enumerate}
 Die Anforderungsliste ist in Tabelle \ref{anforderungsliste} zu finden. In den nachfolgenden Abschnitten werden die einzelnen Anforderungen genauer erkl\"{a}rt.
@@ -132,8 +133,8 @@ Es bestand dennoch weiterhin die Schwierigkeit geeignete Anforderungen zu identi
 \begin{figure}[H]
 	\myfloatalign
 	{\includegraphics[width=.9\linewidth]{gfx/requirements/partikelmessverfahren.pdf}} \quad
-	\caption[\"{U}bersicht \"{u}ber gebr\"{a}chliche Partikelmessverfahren (Quelle: \cite{reinraumtechnik}, S.71)]
-	{\"{U}bersicht \"{u}ber gebr\"{a}chliche Partikelmessverfahren (Quelle: \cite{reinraumtechnik}, S.71)}
+	\caption[\"{U}bersicht \"{u}ber gebr\"{a}chliche Partikelmessverfahren (Quelle: \cite{reinraum}, S.71)]
+	{\"{U}bersicht \"{u}ber gebr\"{a}chliche Partikelmessverfahren (Quelle: \cite{reinraum}, S.71)}
 	\label{fig:verfahren}
 \end{figure}
 
@@ -143,8 +144,8 @@ Die zweite Methode arbeitet rein optisch mit Hilfe von zwei Blenden, die den Ber
 \begin{figure}[H]
 	\myfloatalign
 	{\includegraphics[width=.9\linewidth]{gfx/requirements/optischer_messer.pdf}} \quad
-	\caption[Funktionsprinzip eines optischen Partikelz\"{a}hlers (Quelle: \cite{reinraumtechnik}, S.75)]
-	{Funktionsprinzip eines optischen Partikelz\"{a}hlers (Quelle: \cite{reinraumtechnik}, S.75)}
+	\caption[Funktionsprinzip eines optischen Partikelz\"{a}hlers (Quelle: \cite{reinraum}, S.75)]
+	{Funktionsprinzip eines optischen Partikelz\"{a}hlers (Quelle: \cite{reinraum}, S.75)}
 	\label{fig:optischer_messer}
 \end{figure}
 
@@ -159,16 +160,16 @@ Die zweite Methode arbeitet rein optisch mit Hilfe von zwei Blenden, die den Ber
 \begin{figure}[H]
 	\myfloatalign
 	{\includegraphics[width=.9\linewidth]{gfx/requirements/aerodynamisch_fokus.pdf}} \quad
-	\caption[Messvolumentrennung durch aerodynamische Fokussierung (Quelle: \cite{reinraumtechnik}, S.76)]
-	{Messvolumentrennung durch aerodynamische Fokussierung (Quelle: \cite{reinraumtechnik}, S.76)}
+	\caption[Messvolumentrennung durch aerodynamische Fokussierung (Quelle: \cite{reinraum}, S.76)]
+	{Messvolumentrennung durch aerodynamische Fokussierung (Quelle: \cite{reinraum}, S.76)}
 	\label{fig:aerodynamisch_trennung}
 \end{figure}
 
 \begin{figure}[H]
 	\myfloatalign
 	{\includegraphics[width=.9\linewidth]{gfx/requirements/blenden_fokus.pdf}} \quad
-	\caption[Messvolumentrennung mit Hilfe von Blenden (Quelle: \cite{reinraumtechnik}, S.77)]
-	{Messvolumentrennung mit Hilfe von Blenden (Quelle: \cite{reinraumtechnik}, S.77)}
+	\caption[Messvolumentrennung mit Hilfe von Blenden (Quelle: \cite{reinraum}, S.77)]
+	{Messvolumentrennung mit Hilfe von Blenden (Quelle: \cite{reinraum}, S.77)}
 	\label{fig:optisch_trennung}
 \end{figure}
 
@@ -190,20 +191,24 @@ Die Aerosolquelle liefert mit dem Aerosol, den entscheidenden Faktor zum Partike
 \begin{itemize}
 \item \textbf{Einhaltung eines vorgegebenen Druckbereiches(1)}\\
 Die internen Pumpen, welche den Volumenstrom der Messger\"{a}te regulieren, arbeiten nur in einem bestimmten Druckbereich korrekt(Q). Dieser Druckbereich begrenzt wiederum den Aerosoldruck, welcher am Messger\"{a}t-Einlass herrschen darf. Es ist darauf zu achten, dass die Aerosolquelle diesen Druckbereich einh\"{a}lt(Q). 
-Auch das Design der Aerosolleitungen und der Schaltvorrichtung beeinflussen den Druck am Messger\"{a}t-Einlass %TODO (Quelle: Datenbl\"{a}tter), (Quelle: TSL-Skript)
+Auch das Design der Aerosolleitungen und der Schaltvorrichtung beeinflussen den Druck am Messger\"{a}t-Einlass. 
+Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776} %TODO (Quelle: TSL-Skript)
 
 \item \textbf{Regulationszeit des Aerosolquelle(2)}\\
-Die Einstellzeit einer Leistungskenngr\"{o}{\ss}e beschreibt das dynamische Verhalten der Aerosolquelle bez\"{u}glich dieser Gr\"{o}{\ss}e bei sprungf\"{o}rmigen \"{A}nderungen eines Einstellparameters. Dabei ist vor allem die Einstellzeit der Partikelanzahlkonzentration f\"{u}r den Versuchsaufbau interessant(Q). %TODO (Quelle: VDI 3491)
+Die Einstellzeit einer Leistungskenngr\"{o}{\ss}e beschreibt das dynamische Verhalten der Aerosolquelle bez\"{u}glich dieser Gr\"{o}{\ss}e bei sprungf\"{o}rmigen \"{A}nderungen eines Einstellparameters. Dabei ist vor allem die Einstellzeit der Partikelanzahlkonzentration f\"{u}r den Versuchsaufbau interessant(Q). 
+Quellen: \cite{vdi3491}
 
 \item \textbf{Auswahl eines Tr\"{a}gergases(3)}\\
-Das Tr\"{a}gergas der Aerosole hat einen gro{\ss}en Einfluss auf das Messverhalten der Messger\"{a}te.  F\"{u}r den Versuchsaufbau kommt vor allem gereinigte Luft als Tr\"{a}gergas in Frage, da diese auch bei der Messung der Bremspartikel als Tr\"{a}gergas fungiert und die ausgew\"{a}hlten Messger\"{a}te mit Luft oder Inertgas (UCPC) arbeiten(Q). %TODO (Quelle: Datenbl\"{a}tter)
+Das Tr\"{a}gergas der Aerosole hat einen gro{\ss}en Einfluss auf das Messverhalten der Messger\"{a}te.  F\"{u}r den Versuchsaufbau kommt vor allem gereinigte Luft als Tr\"{a}gergas in Frage, da diese auch bei der Messung der Bremspartikel als Tr\"{a}gergas fungiert und die ausgew\"{a}hlten Messger\"{a}te mit Luft oder Inertgas (UCPC) arbeiten(Q). 
+Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
 
 \item \textbf{Bereitstellen eines ausreichenden Volumenstroms(4)}\\
-Die Messger\"{a}te arbeiten mit einem fest vorgegebenen Volumenstrom des Tr\"{a}gergases.  Es muss gew\"{a}hrleistet sein, dass die Aerosolquelle einen entsprechenden Strom bereitstellen kann. Sollte der Volumenstrom den Anforderungen nicht entsprechen, generieren die Messger\"{a}te eine Fehlermeldung und liefern keine Messwerte mehr(Q). %TODO (Handb\"{u}cher)
+Die Messger\"{a}te arbeiten mit einem fest vorgegebenen Volumenstrom des Tr\"{a}gergases.  Es muss gew\"{a}hrleistet sein, dass die Aerosolquelle einen entsprechenden Strom bereitstellen kann. Sollte der Volumenstrom den Anforderungen nicht entsprechen, generieren die Messger\"{a}te eine Fehlermeldung und liefern keine Messwerte mehr(Q). 
+Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
 
 \item \textbf{Einhalten von Temperaturgrenzen(5)}\\ 
 Die Tr\"{a}gergastemperatur kann je nach Aerosolquelle verschiedene Werte annehmen. Da die Temperatur des Aerosols den Messprozess und die Eigenschaften des Aerosolstromes beeinflusst, geben die Messger\"{a}tehersteller feste Temperaturgrenzen vor zwischen welchen sich diese Temperatur bewegen darf(Q). 
-%TODO (Datenbl\"{a}tter)
+Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
 \end{itemize}
 
 \subsection{Aerosol}
@@ -212,15 +217,15 @@ Folgende Anforderung an das Aerosol ergeben sich aus den Arbeitsbereichsbegrenzu
 \begin{itemize}
 \item \textbf{Einhalten der Partikelanzahlkonzentration(6)}\\
 Eine zu hohe Partikelanzahlkonzentration f\"{u}hrt zu einer H\"{a}ufung von falschen Messergebnissen zum Beispiel durch Koinzidenz bei optischen Sensoren. Messergebnisse bei einer zu niedrigen Partikelanzahlkonzentration k\"{o}nnen bei Messger\"{a}ten, welche mit elektrischen Feldern arbeiten, in dem herrschenden, systematischen Grundrauschen untergehen. Somit muss f\"{u}r verwertbare Ergebnisse die Partikelanzahlkonzentration des Aerosols mit dem benutzten Messger\"{a}t abgeglichen werden(Q).
-%TODO (Quelle: Handb\"{u}cher)
+Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
 
 \item \textbf{Wahl des Partikelmaterial(7)} 
 Partikelmaterialien k\"{o}nnen Gesundheits- oder Umweltgef\"{a}hrdend sein oder aufgrund von ihren Eigenschaften f\"{u}r bestimmte Messverfahren nicht geeignet sein. Deswegen ist es wichtig das benutzte Partikelmaterial zu kennen. Da die hier benutzten Messger\"{a}te vor allem f\"{u}r die Feinstaubmessung benutzt werden, bieten sich zum Beispiel feste Materialien f\"{u}r die Aerosole an(Q).
-%TODO (VDI 3491)
+Quellen: \cite{vdi3491}
 
 \item \textbf{Wahl der Partikelgr\"{o}{\ss}e(8)}\\ 
 Zu kleine Partikel k\"{o}nnen von den Messsystemen der Partikelz\"{a}hler nicht erfasst werden, w\"{a}hrend zu gro{\ss}e Partikel durch Verstopfen der Filter die Funktion beeintr\"{a}chtigen k\"{o}nnen. Manche Hersteller geben an, dass zu gro{\ss}e Partikel zwar gez\"{a}hlt werden, aber nicht mehr in die Gr\"{o}{\ss}enverteilung mit eingehen. Trotzdem sollte zur Sicherheit ein Zyklonabscheider dem System zugeschaltet werden, wenn nicht garantiert werden kann, dass nicht zu viele zu gro{\ss}e Partikel im Aerosol sind(Q).
-%TODO (Datenblatt FMPS)
+Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
 \end{itemize}
 
 \subsection{Schaltvorrichtung}
@@ -241,15 +246,15 @@ Auch bei der Leitung des Aerosols, ist auf eine str\"{o}mungsg\"{u}nstige Ausleg
 \begin{itemize}
 \item \textbf{Str\"{o}mungsweg des Versuchaufbaus(11)}\\ 
 Der Weg zwischen der Umschaltvorrichtung und dem Messger\"{a}teeinlass f\"{u}hrt bei gegebenen Volumenstr\"{o}men, abh\"{a}ngig von dem benutzten Messger\"{a}t, zu einer Verz\"{o}gerungszeit, die sich in der Totzeit des Versuchsaufbaus niederschl\"{a}gt. Da das Str\"{o}mungsverhalten in den Verbindungen nur unter Annahme von Vereinfachungen zutrifft, gilt: Umso l\"{a}nger der Weg ist, umso gr\"{o}{\ss}er ist der Rechenfehler bei der Berechnung der Totzeit. Au{\ss}erdem f\"{u}hren Druck- und Partikelverluste auf diesem Weg zu einer Verzerrung der Partikelfront. (Q)
-%TODO (VDI 3491)
+Quellen: \cite{vdi3491}
 
 \item \textbf{Erreichen eines laminaren Stroms(12)}\\ 
 Da eine turbulente Str\"{o}mung zu einem analytisch kaum berechenbaren Verhalten der Str\"{o}mung f\"{u}hrt, ist der Versuchsaufbau so zu gestalten, dass sich die Str\"{o}mung m\"{o}glichst \"{u}berall laminar verh\"{a}lt (Q). Vor allem am Messger\"{a}te- Einlass, wo es zu einem Querschnitts\"{u}bergang kommen kann, sollten entsprechend gestaltete Adapter daf\"{u}r Sorge tragen.
-%TODO (VDI 3491)
+Quellen: \cite{vdi3491}
 
 \item\textbf{Flexible Schnittstelle zwischen Messger\"{a}t und Versuchsaufbau(13)}\\ 
 Die Messger\"{a}te besitzen einen Aerosoleinlass in Form eines R\"{o}hrchens mit unterschiedlichen Durchmessern, welches in die Umgebung ragt(Q). Je nach Versuchsaufbau k\"{o}nnen Adapter von N\"{o}ten sein, um eine direkte Verbindung zwischen Schaltvorrichtung und Messger\"{a}t zu gew\"{a}hrleisten. Bei der Gestaltung dieser Adapter muss ein Kompromiss zwischen Anforderung 12 und 13 eingegangen werden.
-%TODO  (Datenbl\"{a}tter/Handb\"{u}cher)
+Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
 \end{itemize}
 
 \subsection{Versuchsaufbau}
