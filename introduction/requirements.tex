@@ -1,5 +1,5 @@
 \section{Anforderungen}
-Um sicherstllen zu k\"{o}nnen, dass das Projektziel bestm\"{o}glicht erreicht wird, wurde eine Anforderungsliste erstellt, mit deren Hilfe die G\"{u}te der Umsetzung des Versuchskonzepts gemessen werden kann. Diese Liste enth\"{a}lt die Anforderungen des Auftraggebers und unseren eigenen, welche sich aus den zu Grunde liegenden technischen Dokumenationen der verwendeten Messger\"{a}te und den VDI Richtlinien f\"{u}r Reinraumtechnik ergeben haben.\\
+Um sicherstellen zu k\"{o}nnen, dass das Projektziel bestm\"{o}glicht erreicht wird, wurde eine Anforderungsliste erstellt, mit deren Hilfe die G\"{u}te der Umsetzung des Versuchskonzepts gemessen werden kann. Diese Liste enth\"{a}lt die Anforderungen des Auftraggebers und unseren eigenen, welche sich aus den zu Grunde liegenden technischen Dokumenationen der verwendeten Messger\"{a}te und den VDI Richtlinien f\"{u}r Reinraumtechnik ergeben haben.\\
 Bei den festgelegten Anforderungen war uns eine genaue Quantifizierung der Werte wichtig, wann immer es m\"{o}glich war. Bei den Anforderungen wird zwischen den folgenden Arten unterschieden:
 
 \begin{enumerate}
@@ -95,7 +95,7 @@ F\"{u}r die Generierung eines Partikeltestsignals in Form einer Sprungfunktion l
 	
 	\hline
 	
-	Laminarer Strom & 12 & MF & $< 2300$ & - & VDI 3491\\
+	Laminarer Strom (Reynoldszahl) & 12 & MF & $< 2300$ & - & VDI 3491\\
 	& & ZF & $1500$ & &\\
 	
 	\hline
@@ -122,29 +122,24 @@ F\"{u}r die Generierung eines Partikeltestsignals in Form einer Sprungfunktion l
 	\hline
 \end{longtable}
 \subsection{Aerosolquelle}
-Die Aerosolquelle liefert mit dem Aerosol, den entscheidenden Faktor zum Partikelsprung. Aus den Begrenzungen der Messger\"{a}te sowie allgemeiner Richtlinien zur Aerosolgenerierung ergeben sich folgende Anforderungen.
+Die Aerosolquelle liefert mit dem Aerosol den entscheidenden Faktor zum Partikelsprung. Aus den Begrenzungen der Messger\"{a}te, sowie allgemeiner Richtlinien zur Aerosolgenerierung ergeben sich folgende Anforderungen:
 
 \begin{itemize}
 \item \textbf{Einhaltung eines vorgegebenen Druckbereiches(1)}\\
 Die internen Pumpen, welche den Volumenstrom der Messger\"{a}te regulieren, arbeiten nur in einem bestimmten Druckbereich korrekt(Q). Dieser Druckbereich begrenzt wiederum den Aerosoldruck, welcher am Messger\"{a}t-Einlass herrschen darf. Es ist darauf zu achten, dass die Aerosolquelle diesen Druckbereich einh\"{a}lt(Q). 
-Auch das Design der Aerosolleitungen und der Schaltvorrichtung beeinflussen den Druck am Messger\"{a}t-Einlass. 
-Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}, \cite{tsl_skript}
+Auch das Design der Aerosolleitungen und der Schaltvorrichtung beeinflussen den Druck am Messger\"{a}t-Einlass\cite{fmps_3091}\cite{ops_3330}\cite{aps_3321}\cite{ucpc_3776}\cite{tsl_skript}.
 
 \item \textbf{Regulationszeit des Aerosolquelle(2)}\\
-Die Einstellzeit einer Leistungskenngr\"{o}{\ss}e beschreibt das dynamische Verhalten der Aerosolquelle bez\"{u}glich dieser Gr\"{o}{\ss}e bei sprungf\"{o}rmigen \"{A}nderungen eines Einstellparameters. Dabei ist vor allem die Einstellzeit der Partikelanzahlkonzentration f\"{u}r den Versuchsaufbau interessant(Q). 
-Quellen: \cite{vdi3491}
+Die Einstellzeit einer Leistungskenngr\"{o}{\ss}e beschreibt das dynamische Verhalten der Aerosolquelle bez\"{u}glich dieser Gr\"{o}{\ss}e bei sprungf\"{o}rmigen \"{A}nderungen eines Einstellparameters. Dabei ist vor allem die Einstellzeit der Partikelanzahlkonzentration f\"{u}r den Versuchsaufbau interessant\cite{vdi3491}.
 
 \item \textbf{Auswahl eines Tr\"{a}gergases(3)}\\
-Das Tr\"{a}gergas der Aerosole hat einen gro{\ss}en Einfluss auf das Messverhalten der Messger\"{a}te.  F\"{u}r den Versuchsaufbau kommt vor allem gereinigte Luft als Tr\"{a}gergas in Frage, da diese auch bei der Messung der Bremspartikel als Tr\"{a}gergas fungiert und die ausgew\"{a}hlten Messger\"{a}te mit Luft oder Inertgas (UCPC) arbeiten(Q). 
-Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
+Das Tr\"{a}gergas der Aerosole hat einen gro{\ss}en Einfluss auf das Messverhalten der Messger\"{a}te.  F\"{u}r den Versuchsaufbau kommt vor allem gereinigte Luft als Tr\"{a}gergas in Frage, da diese auch bei der Messung der Bremspartikel als Tr\"{a}gergas fungiert und die ausgew\"{a}hlten Messger\"{a}te mit Luft oder Inertgas (UCPC) arbeiten\cite{fmps_3091}\cite{ops_3330}\cite{aps_3321}\cite{ucpc_3776}.
 
 \item \textbf{Bereitstellen eines ausreichenden Volumenstroms(4)}\\
-Die Messger\"{a}te arbeiten mit einem fest vorgegebenen Volumenstrom des Tr\"{a}gergases.  Es muss gew\"{a}hrleistet sein, dass die Aerosolquelle einen entsprechenden Strom bereitstellen kann. Sollte der Volumenstrom den Anforderungen nicht entsprechen, generieren die Messger\"{a}te eine Fehlermeldung und liefern keine Messwerte mehr(Q). 
-Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
+Die Messger\"{a}te arbeiten mit einem fest vorgegebenen Volumenstrom des Tr\"{a}gergases.  Es muss gew\"{a}hrleistet sein, dass die Aerosolquelle einen entsprechenden Strom bereitstellen kann. Sollte der Volumenstrom den Anforderungen nicht entsprechen, generieren die Messger\"{a}te eine Fehlermeldung und liefern keine Messwerte mehr\cite{fmps_3091}\cite{ops_3330}\cite{aps_3321}\cite{ucpc_3776}.
 
 \item \textbf{Einhalten von Temperaturgrenzen(5)}\\ 
-Die Tr\"{a}gergastemperatur kann je nach Aerosolquelle verschiedene Werte annehmen. Da die Temperatur des Aerosols den Messprozess und die Eigenschaften des Aerosolstromes beeinflusst, geben die Messger\"{a}tehersteller feste Temperaturgrenzen vor zwischen welchen sich diese Temperatur bewegen darf(Q). 
-Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
+Die Tr\"{a}gergastemperatur kann je nach Aerosolquelle verschiedene Werte annehmen. Da die Temperatur des Aerosols den Messprozess und die Eigenschaften des Aerosolstromes beeinflusst, geben die Messger\"{a}tehersteller feste Temperaturgrenzen vor zwischen welchen sich diese Temperatur bewegen darf\cite{fmps_3091}\cite{ops_3330}\cite{aps_3321}\cite{ucpc_3776}
 \end{itemize}
 
 \subsection{Aerosol}
@@ -152,55 +147,48 @@ Folgende Anforderung an das Aerosol ergeben sich aus den Arbeitsbereichsbegrenzu
 
 \begin{itemize}
 \item \textbf{Einhalten der Partikelanzahlkonzentration(6)}\\
-Eine zu hohe Partikelanzahlkonzentration f\"{u}hrt zu einer H\"{a}ufung von falschen Messergebnissen zum Beispiel durch Koinzidenz bei optischen Sensoren. Messergebnisse bei einer zu niedrigen Partikelanzahlkonzentration k\"{o}nnen bei Messger\"{a}ten, welche mit elektrischen Feldern arbeiten, in dem herrschenden, systematischen Grundrauschen untergehen. Somit muss f\"{u}r verwertbare Ergebnisse die Partikelanzahlkonzentration des Aerosols mit dem benutzten Messger\"{a}t abgeglichen werden(Q).
-Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
+Eine zu hohe Partikelanzahlkonzentration f\"{u}hrt zu einer H\"{a}ufung von falschen Messergebnissen, zum Beispiel durch Koinzidenz bei optischen Sensoren. Messergebnisse bei einer zu niedrigen Partikelanzahlkonzentration k\"{o}nnen bei Messger\"{a}ten, welche mit elektrischen Feldern arbeiten, in dem herrschenden, systematischen Grundrauschen untergehen. Somit muss f\"{u}r verwertbare Ergebnisse die Partikelanzahlkonzentration des Aerosols mit dem benutzten Messger\"{a}t abgeglichen werden\cite{fmps_3091}\cite{ops_3330}\cite{aps_3321}\cite{ucpc_3776}.
 
 \item \textbf{Wahl des Partikelmaterial(7)} 
-Partikelmaterialien k\"{o}nnen Gesundheits- oder Umweltgef\"{a}hrdend sein oder aufgrund von ihren Eigenschaften f\"{u}r bestimmte Messverfahren nicht geeignet sein. Deswegen ist es wichtig das benutzte Partikelmaterial zu kennen. Da die hier benutzten Messger\"{a}te vor allem f\"{u}r die Feinstaubmessung benutzt werden, bieten sich zum Beispiel feste Materialien f\"{u}r die Aerosole an(Q).
-Quellen: \cite{vdi3491}
+Partikelmaterialien k\"{o}nnen gesundheits- oder umweltgef\"{a}hrdend sein oder aufgrund von ihren Eigenschaften f\"{u}r bestimmte Messverfahren nicht geeignet sein. Deswegen ist es wichtig das benutzte Partikelmaterial zu kennen. Da die hier benutzten Messger\"{a}te vor allem f\"{u}r die Feinstaubmessung benutzt werden, bieten sich zum Beispiel feste Materialien f\"{u}r die Aerosole an\cite{vdi3491}.
 
 \item \textbf{Wahl der Partikelgr\"{o}{\ss}e(8)}\\ 
-Zu kleine Partikel k\"{o}nnen von den Messsystemen der Partikelz\"{a}hler nicht erfasst werden, w\"{a}hrend zu gro{\ss}e Partikel durch Verstopfen der Filter die Funktion beeintr\"{a}chtigen k\"{o}nnen. Manche Hersteller geben an, dass zu gro{\ss}e Partikel zwar gez\"{a}hlt werden, aber nicht mehr in die Gr\"{o}{\ss}enverteilung mit eingehen. Trotzdem sollte zur Sicherheit ein Zyklonabscheider dem System zugeschaltet werden, wenn nicht garantiert werden kann, dass nicht zu viele zu gro{\ss}e Partikel im Aerosol sind(Q).
-Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
+Zu kleine Partikel k\"{o}nnen von den Messsystemen der Partikelz\"{a}hler nicht erfasst werden, w\"{a}hrend zu gro{\ss}e Partikel durch Verstopfen der Filter die Funktion beeintr\"{a}chtigen k\"{o}nnen. Manche Hersteller geben an, dass zu gro{\ss}e Partikel zwar gez\"{a}hlt werden, aber nicht mehr in die Gr\"{o}{\ss}enverteilung miteingehen. Trotzdem sollte zur Sicherheit ein Zyklonabscheider dem System zugeschaltet werden, wenn nicht garantiert werden kann, dass nicht zu viele zu gro{\ss}e Partikel im Aerosol sind\cite{fmps_3091}\cite{ops_3330}\cite{aps_3321}\cite{ucpc_3776}.
 \end{itemize}
 
 \subsection{Schaltvorrichtung}
-Die Schaltvorrichtung ist das entscheidende Bauteil beim Erzeugen der Sprungfunktion. Dabei sind ein schneller Schaltprozess aber auch ein str\"{o}mungsg\"{u}nstiges Design f\"{u}r die G\"{u}te der Schaltvorrichtung die ausschlaggebenden Kriterien. Auch das Material kann hierbei eine Rolle spielen. Folgende Anforderungen lassen sich definieren.
+Die Schaltvorrichtung ist das entscheidende Bauteil beim Erzeugen der Sprungfunktion. Dabei sind ein schneller Schaltprozess, aber auch ein str\"{o}mungsg\"{u}nstiges Design f\"{u}r die G\"{u}te der Schaltvorrichtung die ausschlaggebenden Kriterien. Auch das Material kann hierbei eine Rolle spielen. Folgende Anforderungen lassen sich definieren:
 
 \begin{itemize}
 \item \textbf{Erreichen einer kurzen Schaltzeit(9)}\\
-Die Zeit, die die Vorrichtung ben\"{o}tigt um von einem Schaltzustand in den anderen zu wechseln, sollte so kurz wie m\"{o}glich sein. Diese Schaltzeit tr\"{a}gt zur Totzeit des Versuchsaufbaus bei. 
+Die Zeit, die die Vorrichtung ben\"{o}tigt, um von einem Schaltzustand in den anderen zu wechseln, sollte so kurz wie m\"{o}glich sein. Diese Schaltzeit tr\"{a}gt zur Totzeit des Versuchsaufbaus bei. 
 	
 \item \textbf{Erreichen eines Str\"{o}mungsbeg\"{u}nstigenden Schaltvorgangs(10)}\\ 
-Hochwinklige Umlenkungen und abrupte Querschnitts\"{a}nderungen k\"{o}nnen zu Partikel- und Druckverlusten f\"{u}hren. Somit k\"{o}nnen sie die G\"{u}te der Partikelfront beeinflussen und sollten deswegen vermieden werden. Außerdem kann es bei ung\"{u}nstigem Design der Schaltvorrichtung zu Turbulenzen in ihrem Inneren kommen, was die Berechenbarkeit der Totzeit des Aufbaus erheblich erschwert. Die vorhergehenden \"{U}berlegungen gelten auch f\"{u}r die Auslegung der Aerosolleitung, (Q).
-%TODO (Hiwis vom Windkanal) 
+Hochwinklige Umlenkungen und abrupte Querschnitts\"{a}nderungen k\"{o}nnen zu Partikel- und Druckverlusten f\"{u}hren. Somit k\"{o}nnen sie die G\"{u}te der Partikelfront beeinflussen und sollten deswegen vermieden werden. Au{\ss}erdem kann es bei ung\"{u}nstigem Design der Schaltvorrichtung zu Turbulenzen in der Versuchseinrichtung kommen, was die Berechenbarkeit der Totzeit des Aufbaus erheblich erschwert. Die vorhergehenden \"{U}berlegungen gelten auch f\"{u}r die Auslegung der Aerosolleitung.
 \end{itemize}
 
 \subsection{Aerosolleitungen}
-Auch bei der Leitung des Aerosols, ist auf eine str\"{o}mungsg\"{u}nstige Auslegung zu achten. Dies betrifft die Ausma{\ss}e, das Material, den Zustand der Innenfl\"{a}chen und die r\"{a}umliche F\"{u}hrung der einzelnen Verbindungen. Die folgenden Anforderungen k\"{o}nnen also auch als Designkriterien angesehen werden.
+Auch bei der Leitung des Aerosols ist auf eine str\"{o}mungsg\"{u}nstige Auslegung zu achten. Dies betrifft die Ausma{\ss}e, das Material, den Zustand der Innenfl\"{a}chen und die r\"{a}umliche F\"{u}hrung der einzelnen Verbindungen. Die folgenden Anforderungen k\"{o}nnen also auch als Designkriterien angesehen werden.
 
 \begin{itemize}
 \item \textbf{Str\"{o}mungsweg des Versuchaufbaus(11)}\\ 
-Der Weg zwischen der Umschaltvorrichtung und dem Messger\"{a}teeinlass f\"{u}hrt bei gegebenen Volumenstr\"{o}men, abh\"{a}ngig von dem benutzten Messger\"{a}t, zu einer Verz\"{o}gerungszeit, die sich in der Totzeit des Versuchsaufbaus niederschl\"{a}gt. Da das Str\"{o}mungsverhalten in den Verbindungen nur unter Annahme von Vereinfachungen zutrifft, gilt: Umso l\"{a}nger der Weg ist, umso gr\"{o}{\ss}er ist der Rechenfehler bei der Berechnung der Totzeit. Au{\ss}erdem f\"{u}hren Druck- und Partikelverluste auf diesem Weg zu einer Verzerrung der Partikelfront. (Q)
-Quellen: \cite{vdi3491}
+Der Weg zwischen der Umschaltvorrichtung und dem Messger\"{a}teeinlass f\"{u}hrt bei gegebenen Volumenstr\"{o}men, abh\"{a}ngig von dem benutzten Messger\"{a}t, zu einer Verz\"{o}gerungszeit, die sich in der Totzeit des Versuchsaufbaus niederschl\"{a}gt. Da das Str\"{o}mungsverhalten in den Verbindungen nur unter Annahme von Vereinfachungen zutrifft, gilt: Umso l\"{a}nger der Weg ist, umso gr\"{o}{\ss}er ist der Rechenfehler bei der Berechnung der Totzeit. Au{\ss}erdem f\"{u}hren Druck- und Partikelverluste auf diesem Weg zu einer Verzerrung der Partikelfront\cite{vdi3491}.
 
 \item \textbf{Erreichen eines laminaren Stroms(12)}\\ 
-Da eine turbulente Str\"{o}mung zu einem analytisch kaum berechenbaren Verhalten der Str\"{o}mung f\"{u}hrt, ist der Versuchsaufbau so zu gestalten, dass sich die Str\"{o}mung m\"{o}glichst \"{u}berall laminar verh\"{a}lt (Q). Vor allem am Messger\"{a}te- Einlass, wo es zu einem Querschnitts\"{u}bergang kommen kann, sollten entsprechend gestaltete Adapter daf\"{u}r Sorge tragen.
-Quellen: \cite{vdi3491}
+Da eine turbulente Str\"{o}mung zu einem analytisch kaum berechenbaren Verhalten der Str\"{o}mung f\"{u}hrt, ist der Versuchsaufbau so zu gestalten, dass sich die Str\"{o}mung m\"{o}glichst \"{u}berall laminar verh\"{a}lt). Vor allem am Messger\"{a}teeinlass, wo es zu einem Querschnitts\"{u}bergang kommen kann, sollten entsprechend gestaltete Adapter daf\"{u}r Sorge tragen\cite{vdi3491}.
 
 \item\textbf{Flexible Schnittstelle zwischen Messger\"{a}t und Versuchsaufbau(13)}\\ 
-Die Messger\"{a}te besitzen einen Aerosoleinlass in Form eines R\"{o}hrchens mit unterschiedlichen Durchmessern, welches in die Umgebung ragt(Q). Je nach Versuchsaufbau k\"{o}nnen Adapter von N\"{o}ten sein, um eine direkte Verbindung zwischen Schaltvorrichtung und Messger\"{a}t zu gew\"{a}hrleisten. Bei der Gestaltung dieser Adapter muss ein Kompromiss zwischen Anforderung 12 und 13 eingegangen werden.
-Quellen: \cite{fmps_3091}, \cite{ops_3330}, \cite{aps_3321}, \cite{ucpc_3776}
+Die Messger\"{a}te besitzen einen Aerosoleinlass in Form eines R\"{o}hrchens mit unterschiedlichen Durchmessern, welches in die Umgebung ragt. Je nach Versuchsaufbau k\"{o}nnen Adapter von N\"{o}ten sein, um eine direkte Verbindung zwischen Schaltvorrichtung und Messger\"{a}t zu gew\"{a}hrleisten. Bei der Gestaltung dieser Adapter muss ein Kompromiss zwischen Anforderung 12 und 13 eingegangen werden\cite{fmps_3091}\cite{ops_3330}\cite{aps_3321}\cite{ucpc_3776}.
 \end{itemize}
 
 \subsection{Versuchsaufbau}
 \begin{itemize}
 \item \textbf{Optimale Pr\"{u}fzeit(14)}\\ 
-Die minimale Versuchszeit ist wichtig in der Versuchsplanung, da durch die Messaufl\"{o}sung der Messger\"{a}te von einer Sekunde, die Anzahl der Messwerte je nach Versuchsaufbau begrenzt ist. Nun kann eine Versuchsdurchf\"{u}hrung aus mehreren Abl\"{a}ufen (abwechselnd: gereinigte Luft (zb. 5 s) -- Aerosol(zb. 30s)) und die Abl\"{a}ufe wiederum aus mehreren Messungen (der Partikelanzahl) bestehen. Je nach Varianz der Partikelanzahl, sind eine bestimmte Anzahl von Messungen und Messabl\"{a}ufen von N\"{o}ten um ein valides Ergebnis f\"{u}r die Zeitkonstante zu erhalten. So sollte der Aufbau ca. 100 Abl\"{a}ufe mit je 30 Partikelanzahlmessungen (+ 5 Sekunden gereinigte Luft pro Ablauf) mit reproduzierbaren Ergebnissen liefern k\"{o}nnen.
+Die minimale Versuchszeit ist wichtig in der Versuchsplanung, da durch die Messaufl\"{o}sung der Messger\"{a}te von einer Sekunde, die Anzahl der Messwerte je nach Versuchsaufbau begrenzt ist. Nun kann eine Versuchsdurchf\"{u}hrung aus mehreren Abl\"{a}ufen (abwechselnd: gereinigte Luft (zb. 5 s) -- Aerosol(zb. 30s)) und die Abl\"{a}ufe wiederum aus mehreren Messungen (der Partikelanzahl) bestehen. Je nach Varianz der Partikelanzahl sind eine bestimmte Anzahl von Messungen und Messabl\"{a}ufen von N\"{o}ten, um ein valides Ergebnis f\"{u}r die Zeitkonstante zu erhalten. So sollte der Aufbau ca. 100 Abl\"{a}ufe mit je 30 Partikelanzahlmessungen (+ 5 Sekunden gereinigte Luft pro Ablauf) mit reproduzierbaren Partikelspr\"{u}ngen liefern k\"{o}nnen.
 
 \item \textbf{Annehmbare Kosten(15)}\\
-Aus wirtschaftlicher Sicht, sind die Kosten ein ausschlaggebender Faktor für die G\"{u}te des Aufbaus. Sie setzen sich aus den Materialkosten selbstgestalteter und eventuell selbstgebauter Teile, den Kosten für Zukaufteile, wie Filter, Verdichter, Aerosolgeneratoren etc. und den Kosten f\"{u}r Ressourcen, wie Strom, Aerosol etc., zusammen. Die maximalen Kosten d\"{u}rfen die vorgegebenen Mittel des Fachgebietes nicht \"{u}berschreiten. 
+Aus wirtschaftlicher Sicht sind die Kosten ein ausschlaggebender Faktor f\"{u}r die G\"{u}te des Aufbaus. Sie setzen sich aus den Materialkosten selbstgestalteter und eventuell selbstgebauter Teile, den Kosten f\"{u}r Zukaufteile, wie Filter, Verdichter, Aerosolgeneratoren etc. und den Kosten f\"{u}r Ressourcen, wie Strom, Aerosol etc., zusammen. Die maximalen Kosten d\"{u}rfen die vorgegebenen Mittel des Fachgebietes nicht \"{u}berschreiten. 
 
 \item \textbf{Flexibilit\"{a}t f\"{u}r verschiedene Ger\"{a}te(16)}\\
-Ziel des Aufbaus ist die Evaluation der Dynamik von Messger\"{a}ten, welche f\"{u}r Messungen von Bremspartikeln am Schwungmassenpr\"{u}fstand ben\"{o}tigt werden. Von den f\"{u}nf f\"{u}r diesen Zweck ausgesuchten Messger\"{a}ten, wurden vor allem der FMPS 3091 und der OPS 3330 f\"{u}r geeignet befunden. Nun sollen die, durch den hier konstruierten Versuchsaufbau, ermittelten Werte zumindest f\"{u}r diese beiden Ger\"{a}te ein valides Ergebnis darstellen. Jedes weitere Messger\"{a}t, das durch den Aufbau erfolgreich getestet werden kann, erh\"{o}ht dessen wirtschaftlichen und wissenschaftlichen Wert.
+Ziel des Aufbaus ist die Evaluation der Dynamik von Messger\"{a}ten, welche f\"{u}r Messungen von Bremspartikeln am Schwungmassenpr\"{u}fstand ben\"{o}tigt werden. Von den f\"{u}nf f\"{u}r diesen Zweck ausgesuchten Messger\"{a}ten wurden vor allem der FMPS 3091 und der OPS 3330 f\"{u}r geeignet befunden. Nun sollen die, durch den hier konstruierten Versuchsaufbau, ermittelten Werte zumindest f\"{u}r diese beiden Ger\"{a}te ein valides Ergebnis darstellen. Jedes weitere Messger\"{a}t, das durch den Aufbau erfolgreich getestet werden kann, erh\"{o}ht dessen wirtschaftlichen und wissenschaftlichen Wert.
 \end{itemize}
